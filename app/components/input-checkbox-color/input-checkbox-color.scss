@@ -1,15 +1,63 @@
-.input-checkbox-color {
-    &__color {
-         display: none;
+.color-checkbox {
+	display: inline-flex;
+	position: relative;
+	width: 36px;
+	height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover {
+		.color-checkbox {
+			&__icon {
+				opacity: .5;
+				visibility: visible;
+			}
+		}
     }
 
-    &__round {
-        width: 40px;
-        height: 40px;
-        display: inline-block;
-        border-radius: 50%;
-        border: 1px solid color('gray');
-        margin-right: 6px;
-        margin-bottom: 6px;
+    &[style*="#ffffff"] {
+        border: 1px solid color("gray");
+
+        .icon {
+			fill: color("blue");
+		}
     }
+
+	&__input {
+		position: absolute !important;
+		overflow: hidden !important;
+		clip: rect(0 0 0 0) !important;
+		height: 1px !important;
+		width: 1px !important;
+		margin: -1px !important;
+		padding: 0 !important;
+		border: 0 !important;
+		opacity: 0 !important;
+	}
+
+	&__icon {
+		display: inline-flex;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 0;
+		visibility: hidden;
+		// transition: opacity $animation-time, visibility $animation-time;
+
+		.icon {
+			fill: color("white");
+		}
+	}
+
+	&__input {
+		&:checked {
+			+ .color-checkbox {
+				&__icon {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+		}
+	}
 }

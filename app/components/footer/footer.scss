@@ -1,27 +1,31 @@
-.container_footer {
-    background-color: color("gray-lighter");
-}
-
 .footer {
-    display: flex;
-    height: 150px;
-    justify-content: flex-start;
-    margin-left: 70px;
-    align-items: center;
-    
-    &__item {
-		background-color: #fff;
-        position: relative;
-        margin-right: 4px;
-		padding: 4px 15px;
+    padding: 40px 0;
+    background-color: color('gray-lighter');
+
+    &__nav {
+        margin-bottom: 15px;
     }
 
-}
+    &__copyright {
+        font-size: 12px;
+        line-height: 22px;
+        color: color("gray");
+    }
 
-.label {
-	margin-left: 70px;
-	padding-bottom: 40px;
-	font-size: 12px;
-	color: color("gray");
-}
+    &__phone {
+        text-align: right;
+    }
 
+    &__phone-text {
+        margin-bottom: 10px;
+        font-size: 12px;
+        line-height: 22px;
+    }
+
+    &__phone-link {
+        font-size: 20px;
+        line-height: 22px;
+        color: color("gray-darkest");
+        text-decoration: none;
+    }
+}

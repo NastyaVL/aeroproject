@@ -1,15 +1,15 @@
 //- Используем стандартный шаблон
 extends ../layouts/default/default
-include ../components/card-list/card-list
-include ../components/page-title/page-title
-include ../components/input-checkbox/input-checkbox
-include ../components/input-checkbox-color/input-checkbox-color
 
 include ../components/breadcrumbs/breadcrumbs
+include ../components/page-title/page-title
+include ../components/card-list/card-list
+include ../components/filter-list/filter-list
 
+//- Выводим контент
 block content
     .container
-        .mt-xl-12.mb-xl-3
+        .mt-md-12.mb-md-3
             -
                 var breadcrumbs = [
                     {url: '#', title: 'Главная', value: 'Главная'},
@@ -19,40 +19,48 @@ block content
                 ]
             +breadcrumbs(breadcrumbs)
         +page-title('Диваны')
-        .mt-xl-12
+        .mt-md-12.mb-md-20
             .row
-                .col-xl-5.pt-xl-4
-                    .filter-color
-                        +input-checkbox-color('color',  '#fff')
-                        +input-checkbox-color('color',  '#000')
-                        +input-checkbox-color('color',  '#5a5a5a')
-                        +input-checkbox-color('color',  '#704d35')
-                        +input-checkbox-color('color',  '#e0791d')
-                        br
-                        +input-checkbox-color('color',  '#ba0606')
-                        +input-checkbox-color('color',  '#38a01a')
-                        +input-checkbox-color('color',  '#314976')
-                        +input-checkbox-color('color',  '#3748a6')
-                    +input-checkbox('materials', 'Вельвет')
-                    br
-                    +input-checkbox('materials', 'Мирковелюр')
-                    br
-                    +input-checkbox('materials', 'Велюр')
-                    br
-                    +input-checkbox('materials', 'Жаккард')
-                    br
-                    +input-checkbox('materials', 'Замша')
-                    br
-                    +input-checkbox('materials', 'Рогожка')
-                    br
-                    +input-checkbox('angle','Левый')
-                    br
-                    +input-checkbox('angle','Правый')
-                    br
-                    +input-checkbox('angle','Универсальный')
-
-
-                .col-xl-18.offset-xl-1
+                .col-lg-5.pt-lg-4.col-md-8
+                    -
+                        var filters = [
+                            {
+                                title: 'Цвет',
+                                type: 'color',
+                                items: [
+                                    { name: 'filter-color', color: '#ffffff' },
+                                    { name: 'filter-color', color: '#000000' },
+                                    { name: 'filter-color', color: '#5a5a5a' },
+                                    { name: 'filter-color', color: '#704d35' },
+                                    { name: 'filter-color', color: '#e0791d' },
+                                    { name: 'filter-color', color: '#ba0606' },
+                                    { name: 'filter-color', color: '#38a01a' },
+                                    { name: 'filter-color', color: '#314976' },
+                                    { name: 'filter-color', color: '#3748a6' }
+                                ]
+                            },
+                            {
+                                title: 'Материал',
+                                items: [
+                                    { name: 'filter-fabric', label: 'Вельвет' },
+                                    { name: 'filter-fabric', label: 'Микровелюр' },
+                                    { name: 'filter-fabric', label: 'Велюр' },
+                                    { name: 'filter-fabric', label: 'Жаккард' },
+                                    { name: 'filter-fabric', label: 'Замша' },
+                                    { name: 'filter-fabric', label: 'Рогожка' }
+                                ]
+                            },
+                            {
+                                title: 'Угол',
+                                items: [
+                                    { name: 'filter-angle', label: 'Левый' },
+                                    { name: 'filter-angle', label: 'Правый' },
+                                    { name: 'filter-angle', label: 'Универсальный' }
+                                ]
+                            }
+                        ]
+                    +filter-list(filters)
+                .col-lg-18.offset-lg-1.col-md-16
                     -
                         var cards = [
                             {
@@ -98,4 +106,4 @@ block content
                                 btns: ['favourites', 'cart']
                             }
                         ]
-                    +card-list(cards)                
+                    +card-list(cards)                    

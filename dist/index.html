@@ -78,7 +78,7 @@
     </header>
     <main class="main">
       <div class="container">
-        <div class="mt-xl-12 mb-xl-3">
+        <div class="mt-md-12 mb-md-3">
           <div class="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="link" href="#" title="Главная">Главная</a><span class="breadcrumbs__separator">/</span></li>
@@ -91,67 +91,173 @@
         <div class="page-title">
           <h1>Диваны</h1>
         </div>
-        <div class="mt-xl-12">
+        <div class="mt-md-12 mb-md-20">
           <div class="row">
-            <div class="col-xl-5 pt-xl-4">
-              <div class="filter-color">
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #fff"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #000"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #5a5a5a"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #704d35"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #e0791d"></span>
-                </label><br>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #ba0606"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #38a01a"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #314976"></span>
-                </label>
-                <label class="input-checkbox-color">
-                  <input class="input-checkbox-color__color" type="checkbox" name="color"/><span class="input-checkbox-color__circle" style="background: #3748a6"></span>
-                </label>
-              </div>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Вельвет</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Мирковелюр</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Велюр</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Жаккард</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Замша</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="materials"/><span class="input-checkbox__label">Рогожка</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="angle"/><span class="input-checkbox__label">Левый</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="angle"/><span class="input-checkbox__label">Правый</span>
-              </label><br>
-              <label class="input-checkbox">
-                <input class="input-checkbox__input" type="checkbox" name="angle"/><span class="input-checkbox__label">Универсальный</span>
-              </label>
+            <div class="col-lg-5 pt-lg-4 col-md-8">
+              <form class="filter-list" action="">
+                <div class="filter-list__item">
+                  <div class="filter filter_color">
+                    <div class="filter__title">Цвет
+                      <div class="filter__title-icon">
+                        <svg class="icon icon-arrow">
+                          <use xlink:href="assets/images/icons/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filter__items">
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#ffffff;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-1"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#000000;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-2"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#5a5a5a;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-3"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#704d35;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-4"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#e0791d;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-5"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#ba0606;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-6"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#38a01a;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-7"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#314976;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-8"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="color-checkbox" style="background-color:#3748a6;">
+                          <input class="color-checkbox__input" type="checkbox" name="filter-color-9"/><span class="color-checkbox__icon">
+                            <svg class="icon icon-check">
+                              <use xlink:href="assets/images/icons/sprite.svg#check"></use>
+                            </svg></span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-list__item">
+                  <div class="filter">
+                    <div class="filter__title">Материал
+                      <div class="filter__title-icon">
+                        <svg class="icon icon-arrow">
+                          <use xlink:href="assets/images/icons/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filter__items">
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-1"/><span class="input-checkbox__label">Вельвет</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-2"/><span class="input-checkbox__label">Микровелюр</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-3"/><span class="input-checkbox__label">Велюр</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-4"/><span class="input-checkbox__label">Жаккард</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-5"/><span class="input-checkbox__label">Замша</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-fabric-6"/><span class="input-checkbox__label">Рогожка</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-list__item">
+                  <div class="filter">
+                    <div class="filter__title">Угол
+                      <div class="filter__title-icon">
+                        <svg class="icon icon-arrow">
+                          <use xlink:href="assets/images/icons/sprite.svg#arrow"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <div class="filter__items">
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-angle-1"/><span class="input-checkbox__label">Левый</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-angle-2"/><span class="input-checkbox__label">Правый</span>
+                        </label>
+                      </div>
+                      <div class="filter__item">
+                        <label class="input-checkbox">
+                          <input class="input-checkbox__input" type="checkbox" name="filter-angle-3"/><span class="input-checkbox__label">Универсальный</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="filter-list__btns">
+                  <input class="btn btn_primary btn_block" type="submit" value="Применить"/>
+                  <input class="btn btn_clear btn_block" type="reset" value="Очистить фильтр"/>
+                </div>
+              </form>
             </div>
-            <div class="col-xl-18 offset-xl-1">
+            <div class="col-lg-18 offset-lg-1 col-md-16">
               <div class="card-list">
                 <div class="row">
                   <div class="col-xl-8">
@@ -274,13 +380,34 @@
           </div>
         </div>
       </div>
-      <div class="container_footer">
-        <footer class="footer">
-          <ul class="footer__menu">
-          </ul>
-        </footer>
-        <div class="label">© 2019, Интернет-магазин мебели</div>
-      </div>
     </main>
+    <footer class="footer"> 
+      <div class="container">
+        <div class="row">
+          <div class="col-md-13">
+            <div class="footer__nav">
+              <nav class="footer-menu">
+                <ul class="footer-menu__list">
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Каталог">Каталог</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Оплата">Оплата</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Доставка">Доставка</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Возврат">Возврат</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Сборка">Сборка</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Помощь">Помощь</a></li>
+                  <li class="footer-menu__item"><a class="footer-menu__link link" href="#" title="Обратная связь">Обратная связь</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="footer__copyright">&copy; 2019, Интернет-магазин мебели</div>
+          </div>
+          <div class="col-lg-5 offset-lg-6 col-md-8 offset-md-3">
+            <div class="footer__phone">
+              <div class="footer__phone-text">По любым вопросам обращайтесь:</div><a class="footer__phone-link" href="tel:+74992421254" title="+7 499 242-12-54">+7 499 242-12-54</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="assets/scripts/app.min.js"></script>
   </body>
 </html>
