@@ -1,0 +1,101 @@
+//- Используем стандартный шаблон
+extends ../layouts/default/default
+include ../components/card-list/card-list
+include ../components/page-title/page-title
+include ../components/input-checkbox/input-checkbox
+include ../components/input-checkbox-color/input-checkbox-color
+
+include ../components/breadcrumbs/breadcrumbs
+
+block content
+    .container
+        .mt-xl-12.mb-xl-3
+            -
+                var breadcrumbs = [
+                    {url: '#', title: 'Главная', value: 'Главная'},
+                    {url: '#', title: 'Каталог', value: 'Каталог'},
+                    {url: '#', title: 'Мягкая мебель', value: 'Мягкая мебель'},
+                    {value: 'Диваны'}
+                ]
+            +breadcrumbs(breadcrumbs)
+        +page-title('Диваны')
+        .mt-xl-12
+            .row
+                .col-xl-5.pt-xl-4
+                    .filter-color
+                        +input-checkbox-color('color',  '#fff')
+                        +input-checkbox-color('color',  '#000')
+                        +input-checkbox-color('color',  '#5a5a5a')
+                        +input-checkbox-color('color',  '#704d35')
+                        +input-checkbox-color('color',  '#e0791d')
+                        br
+                        +input-checkbox-color('color',  '#ba0606')
+                        +input-checkbox-color('color',  '#38a01a')
+                        +input-checkbox-color('color',  '#314976')
+                        +input-checkbox-color('color',  '#3748a6')
+                    +input-checkbox('materials', 'Вельвет')
+                    br
+                    +input-checkbox('materials', 'Мирковелюр')
+                    br
+                    +input-checkbox('materials', 'Велюр')
+                    br
+                    +input-checkbox('materials', 'Жаккард')
+                    br
+                    +input-checkbox('materials', 'Замша')
+                    br
+                    +input-checkbox('materials', 'Рогожка')
+                    br
+                    +input-checkbox('angle','Левый')
+                    br
+                    +input-checkbox('angle','Правый')
+                    br
+                    +input-checkbox('angle','Универсальный')
+
+
+                .col-xl-18.offset-xl-1
+                    -
+                        var cards = [
+                            {
+                                href: '#',
+                                name: 'Montreal',
+                                imgUrl: 'assets/images/item-01.jpg',
+                                price: '10&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Glasgow',
+                                imgUrl: 'assets/images/item-02.jpg',
+                                price: '19&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Munich',
+                                imgUrl: 'assets/images/item-03.jpg',
+                                price: '24&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Alexandria',
+                                imgUrl: 'assets/images/item-04.jpg',
+                                price: '109&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Karachi',
+                                imgUrl: 'assets/images/item-05.jpg',
+                                price: '17&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            },
+                            {
+                                href: '#',
+                                name: 'Phoenix',
+                                imgUrl: 'assets/images/item-06.jpg',
+                                price: '29&nbsp;990',
+                                btns: ['favourites', 'cart']
+                            }
+                        ]
+                    +card-list(cards)                

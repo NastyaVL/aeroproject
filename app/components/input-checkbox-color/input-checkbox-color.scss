@@ -1,0 +1,15 @@
+.input-checkbox-color {
+    &__color {
+         display: none;
+    }
+
+    &__round {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        border-radius: 50%;
+        border: 1px solid color('gray');
+        margin-right: 6px;
+        margin-bottom: 6px;
+    }
+}

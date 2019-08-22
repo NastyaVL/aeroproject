@@ -1,0 +1,13 @@
+include ../../components/header/header
+include ../../components/footer/footer
+include ../../common/templates/mixins/mixins
+
+doctype html
+html(lang='ru')
+    include parts/head
+    body
+        +header()
+        main.main
+            block content
+            +footer()
+            

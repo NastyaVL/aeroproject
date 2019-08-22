@@ -1,0 +1,13 @@
+include ../icon-btn/icon-btn
+
+mixin card-item(attrs)
+    .card-item
+        a.card-item__link(href=attrs.href title=attrs.name)
+            img.card-item__img(src=attrs.imgUrl, alt="")
+            span.card-item__name= attrs.name
+        .card-item__wrap
+            .card-item__price!= attrs.price
+                | &nbsp;руб.
+            .card-item__btns
+                each btn in attrs.btns
+                    +icon-btn(btn)
